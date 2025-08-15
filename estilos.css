@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0a0a0a;
+  color: #f0e6ff;
+  margin: 20px;
+}
+
+.contenedor {
+  display: flex;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 0 45px rgba(128, 0, 128, 0.95);
+}
+
+.caja-izquierda {
+  flex: 1;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.caja-izquierda img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.caja-derecha {
+  flex: 1.5;
+  padding: 20px;
+}
+h2 {
+  color: #d8b4ff;
+}
+.precio {
+  font-size: 18px;
+  color: #b366ff;
+  font-weight: bold;
+}
+
+.fila-imagen-boton {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.imagen-redonda {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #b366ff;
+}
+
+.btn-comprar {
+  background-color: #800080;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.btn-comprar:hover {
+  background-color: #a64ca6;
+}
+
+.rating {
+  direction: rtl;
+  display: inline-flex;
+}
+.rating input {
+  display: none;
+}
+.rating label {
+  font-size: 25px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+  color: gold;
+}
+
+.descripcion {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.fila-selects {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+.fila-selects label {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 3px;
+}
+.fila-selects select {
+  background-color: #2a2a2a;
+  color: #f0e6ff;
+  border: 1px solid #800080;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+  }
+  .fila-selects {
+    flex-direction: column;
+  }
+}
